@@ -1,0 +1,61 @@
+a
+{
+	text-decoration:underline;
+	color:white;
+	padding-left:20px;	
+	padding-right:20px;
+}
+#search
+{
+	margin-left:400px;
+}
+#header
+{
+	font-size:60px;
+	font-family: 'Nunito', sans-serif;
+	margin-left:320px;
+}
+#demo
+{
+	font-size:60px;
+	font-family: 'Shadows Into Light', cursive;
+	color: #3b8dbd;
+}
+td
+{
+	border:1px solid black;
+	padding:5px;
+}
+td a
+{
+	text-decoration: none;
+}
+td button
+{
+	border:none;
+	height:30px;
+	border-radius: 5px;
+}
+#article
+{
+	background-color: brown;
+}
+#demobutton
+{
+	background-color:#3b8dbd;
+}
+#downloadbutton
+{
+	background-color:#33363b;
+}
+#showit
+{
+	margin-top:10px;
+	margin-left:275px;
+	font-size:18px;
+	font-family: 'Nunito', sans-serif;	
+}
+#search
+{
+	font-size:16px;
+}

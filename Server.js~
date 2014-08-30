@@ -1,0 +1,41 @@
+var express	=	require('express');
+var app		=	express();
+var mysql	=	require('mysql');
+
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database : 'demos'
+});
+
+connection.connect(function(){
+	console.log("<== MySQL Database is Connected ==>");
+});
+
+app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/js'));
+
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
+
+app.get('/',function(req,res){
+	
+	res.render('index.html');
+
+});
+
+app.get('/load',function(req,res){
+	console.log("<== We are going to load data from Table ==>");
+	connection.query("select * from cfg_demos",function(err,rows,fields){
+		if(err)	throw err;		
+		console.log("<== Data is been loaded. ==>");
+		res.end(JSON.stringify(rows));	
+		console.log("<== Data is been sent to Client. ==>");				
+	});
+
+});
+
+app.listen(7001,function(){
+		console.log("<== App is started at PORT 7001 ==>");
+});

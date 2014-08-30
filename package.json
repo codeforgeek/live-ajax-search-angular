@@ -1,0 +1,11 @@
+{
+  "name": "demos-cfg",
+  "version": "0.0.1",
+  "description": "Live search using Angular and Node",
+  "main": "Server.js",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.8.6",
+    "mysql": "^2.4.3"
+  }
+}
